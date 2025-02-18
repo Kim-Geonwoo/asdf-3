@@ -10,7 +10,7 @@ export default function DefaultLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="bg-black relative flex flex-col h-screen">
+    <div className="b relative flex flex-col h-screen">
       <Head />
       <Header />
       <main className="flex-grow">{children}</main>
