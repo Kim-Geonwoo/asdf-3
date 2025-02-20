@@ -6,6 +6,7 @@ import BlurText from "@/components/lib/BlurText";
 import DefaultLayout from "@/layouts/default";
 import { ContentScroll } from "@/components/ContentScroll";
 import { AboutMe } from "@/components/AboutMe";
+import { PopupPlayer } from "@/components/PopupPlayer";
 
 export default function IndexPage() {
   return (
@@ -30,7 +31,13 @@ export default function IndexPage() {
               src="/images/tape_1-nobg.png"
               width={500}
             />
-            <p className="fixed z-50 top-[11rem] right-[3.8rem] text-white px-0.5 border box-border border-black">click me!</p>
+            <div className="fixed z-50 top-[11rem] right-[3.8rem] text-white px-0.5 border box-border border-black">
+
+            <PopupPlayer />
+            </div>
+
+
+            {/* <p className="fixed z-50 top-[11rem] right-[3.8rem] text-white px-0.5 border box-border border-black">click me!</p>*/}
           </div>
           
 
