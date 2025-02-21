@@ -31,15 +31,12 @@ export default function IndexPage() {
               src="/images/tape_1-nobg.png"
               width={500}
             />
-            <div className="fixed z-50 top-[11rem] right-[3.8rem] text-white px-0.5 border box-border border-black">
-
-            <PopupPlayer />
+            <div className="fixed z-50 top-[11.2rem] lg:top-[13.4rem] right-[2.3rem] lg:right-[3rem] text-white px-0.5 border box-border border-black">
+              <PopupPlayer />
             </div>
-
 
             {/* <p className="fixed z-50 top-[11rem] right-[3.8rem] text-white px-0.5 border box-border border-black">click me!</p>*/}
           </div>
-          
 
           <div className="flex flex-col pt-2 md:mt-[70px] lg:mt-[70px] mt-[50px] pr-3 justify-center">
             <BlurText

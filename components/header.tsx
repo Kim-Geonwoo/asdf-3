@@ -4,7 +4,6 @@ import {
   NavbarContent,
   NavbarBrand,
   NavbarItem,
-  NavbarMenuItem,
   NavbarMenu,
   NavbarMenuToggle,
 } from "@heroui/navbar";
@@ -17,7 +16,6 @@ import { Input } from "@heroui/input";
 import { Kbd } from "@heroui/kbd";
 
 import { GithubIcon, HeartFilledIcon, SearchIcon } from "./icons";
-import { ThemeSwitch } from "./theme-switch";
 
 import { siteConfig } from "@/config/site";
 
@@ -73,9 +71,39 @@ export const Header = () => {
         className="hidden sm:flex basis-1/5 sm:basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden sm:flex gap-2">
-          <ThemeSwitch />
+        <NavbarItem className="lg:flex">
+          <Link
+            className="text-white"
+            href="https://music.apple.com/us/artist/%EA%B9%80%EA%B1%B0%EB%88%84/1774774538"
+          >
+            Apple Music
+          </Link>
         </NavbarItem>
+        <NavbarItem className="lg:flex">
+          <Link
+            className="text-white"
+            href="https://www.youtube.com/channel/UCsI6PlDcZLOudV00YhvakcQ"
+          >
+            YouTube
+          </Link>
+        </NavbarItem>
+        <NavbarItem className="lg:flex">
+          <Link
+            className="text-white"
+            href="https://open.spotify.com/artist/5dN2rRPbn2Uag2tZVlxHFs?si=WeWEetPeQ3-NJfv7wYH1Lw&nd=1&dlsi=d5f9e3ebd1914fe5"
+          >
+            Spotify
+          </Link>
+        </NavbarItem>
+        <NavbarItem className="lg:flex">
+          <Link
+            className="text-white"
+            href="https://www.melon.com/artist/detail.htm?artistId=3985240"
+          >
+            Spotify
+          </Link>
+        </NavbarItem>
+
         <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
         <NavbarItem className="hidden md:flex">
           <Button
@@ -92,33 +120,61 @@ export const Header = () => {
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal href={siteConfig.links.github}>
+        <Link isExternal href="https://github.com/Kim-Geonwoo">
           <GithubIcon className="text-default-500" />
         </Link>
-        <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
 
       <NavbarMenu>
         {searchInput}
-        <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
-                href="#"
-                size="lg"
-              >
-                {item.label}
-              </Link>
-            </NavbarMenuItem>
-          ))}
+        <div className="mx-4 mt-2 flex flex-col gap-2 ">
+          <NavbarItem className="lg:flex">
+            <Link
+              className="text-white"
+              href="https://music.apple.com/us/artist/%EA%B9%80%EA%B1%B0%EB%88%84/1774774538"
+            >
+              Apple Music
+            </Link>
+          </NavbarItem>
+          <NavbarItem className="lg:flex">
+            <Link
+              className="text-white"
+              href="https://www.youtube.com/channel/UCsI6PlDcZLOudV00YhvakcQ"
+            >
+              YouTube
+            </Link>
+          </NavbarItem>
+          <NavbarItem className="lg:flex">
+            <Link
+              className="text-white"
+              href="https://open.spotify.com/artist/5dN2rRPbn2Uag2tZVlxHFs?si=WeWEetPeQ3-NJfv7wYH1Lw&nd=1&dlsi=d5f9e3ebd1914fe5"
+            >
+              Spotify
+            </Link>
+          </NavbarItem>
+          <NavbarItem className="lg:flex">
+            <Link
+              className="text-white"
+              href="https://www.melon.com/artist/detail.htm?artistId=3985240"
+            >
+              Spotify
+            </Link>
+          </NavbarItem>
+
+          <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
+          <NavbarItem className="hidden md:flex">
+            <Button
+              isExternal
+              as={Link}
+              className="text-sm font-normal text-default-600 bg-default-100"
+              href={siteConfig.links.sponsor}
+              startContent={<HeartFilledIcon className="text-danger" />}
+              variant="flat"
+            >
+              Sponsor
+            </Button>
+          </NavbarItem>
         </div>
       </NavbarMenu>
     </HeroUINavbar>

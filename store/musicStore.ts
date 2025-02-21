@@ -6,6 +6,6 @@ interface MusicState {
 }
 
 export const useMusicStore = create<MusicState>((set) => ({
-  currentTrack: "summerdance",
+  currentTrack: "",
   setCurrentTrack: (track) => set({ currentTrack: track }),
 }));

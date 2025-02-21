@@ -26,7 +26,10 @@ export const PopupPlayer: React.FC = () => {
 
   return (
     <div>
-      <Button className="" onPress={openModal}>
+      <Button className="bg-opacity-0 text-md"
+        size="sm"
+
+        onPress={openModal}>
         Open Player
       </Button>
       <Modal className="modal" isOpen={modalIsOpen} onClose={closeModal}>
@@ -34,17 +37,14 @@ export const PopupPlayer: React.FC = () => {
           <ModalHeader>
             <div className="flex justify-between items-center">
               <h2>Music Player</h2>
-              <Button className="close-button" onPress={closeModal}>
-                Close
-              </Button>
             </div>
           </ModalHeader>
-          <ModalBody>
-            <MusicPlayer track={currentTrack} />{" "}
-            {/* 현재 재생 중인 트랙 전달 */}
+          <ModalBody className="flex justify-center w-64">
+            <MusicPlayer displaySkipControls={true} track={currentTrack} />
+            {/* displaySkipControls true 전달로 다음/이전곡 버튼 표시 */}
           </ModalBody>
           <ModalFooter>
-            {/* 필요한 경우 추가 제어 버튼이나 정보를 여기에 배치할 수 있습니다 */}
+            {/* 필요한 경우 추가 제어 버튼이나 정보를 여기에 배치 */}
           </ModalFooter>
         </ModalContent>
       </Modal>

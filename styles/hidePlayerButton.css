@@ -1,0 +1,4 @@
+button[aria-label="Rewind" i],
+button[aria-label="Forward" i] {
+  display: none !important;
+}
