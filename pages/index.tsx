@@ -12,7 +12,7 @@ export default function IndexPage() {
   return (
     <DefaultLayout>
       <Aurora colorStops={["#1DB959", "#00D7FE", "#2FC125"]} speed={0.5} />
-      <section className="flex flex-col items-center justify-center">
+      <section className="flex flex-col items-center justify-center bg-black">
         <div className="items-between justify-between w-full md:h-[22.6rem] lg:h-[22.8rem] h-[20.3em]">
           <Image
             alt="human-1"
@@ -31,7 +31,7 @@ export default function IndexPage() {
               src="/images/tape_1-nobg.png"
               width={500}
             />
-            <div className="fixed z-50 top-[11.2rem] lg:top-[13.4rem] right-[2.3rem] lg:right-[3rem] text-white px-0.5 border box-border border-black">
+            <div className="fixed z-50 top-[11.2rem] lg:top-[13.4rem] right-[2.3rem] lg:right-[3rem] text-white px-0.5 border box-border border-black bg-gray-300">
               <PopupPlayer />
             </div>
 
@@ -80,7 +80,7 @@ export default function IndexPage() {
             </Button>
           </div>
         </div>
-        <div className="container w-full mt-[20rem]">
+        <div className="container w-full mt-[20rem] bg-black">
           <AboutMe />
         </div>
 

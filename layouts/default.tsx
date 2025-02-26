@@ -1,4 +1,4 @@
-import { Link } from "@heroui/link";
+import GitHubButton from "react-github-btn";
 
 import { Head } from "./head";
 
@@ -14,8 +14,17 @@ export default function DefaultLayout({
       <Head />
       <Header />
       <main className="flex-grow">{children}</main>
-      <footer className="w-full flex items-center justify-center py-3">
-        :)
+      <footer className="w-full bg-black text-white flex items-center justify-center py-3">
+        <GitHubButton
+          aria-label="Star Kim-Geonwoo/asdf-3 on GitHub"
+          data-color-scheme="no-preference: dark; light: light; dark: dark;"
+          data-icon="octicon-star"
+          data-size="large"
+          href="https://github.com/Kim-Geonwoo/asdf-3"
+        >
+          Star
+        </GitHubButton>
+        <p className="ml-3">:)</p>
       </footer>
     </div>
   );

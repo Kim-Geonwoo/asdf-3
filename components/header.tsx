@@ -15,7 +15,7 @@ import { link as linkStyles } from "@heroui/theme";
 import { Input } from "@heroui/input";
 import { Kbd } from "@heroui/kbd";
 
-import { GithubIcon, HeartFilledIcon, SearchIcon } from "./icons";
+import { GithubIcon, SearchIcon } from "./icons";
 
 import { siteConfig } from "@/config/site";
 
@@ -25,7 +25,7 @@ export const Header = () => {
       aria-label="Search"
       classNames={{
         inputWrapper: "bg-default-100",
-        input: "text-sm",
+        input: "text-sm"
       }}
       endContent={
         <Kbd className="hidden lg:inline-block" keys={["command"]}>
@@ -42,11 +42,11 @@ export const Header = () => {
   );
 
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
+    <HeroUINavbar className="bg-black" maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <div className="font-bold text-inherit">Geonwoo_PlayList</div>
+            <div className="text-gray-100 font-bold text-inherit">Geonwoo_PlayList</div>
           </NextLink>
         </NavbarBrand>
         <div className="hidden lg:flex gap-4 justify-start ml-2">
@@ -100,7 +100,7 @@ export const Header = () => {
             className="text-white"
             href="https://www.melon.com/artist/detail.htm?artistId=3985240"
           >
-            Spotify
+            Melon
           </Link>
         </NavbarItem>
 
@@ -109,12 +109,12 @@ export const Header = () => {
           <Button
             isExternal
             as={Link}
-            className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.sponsor}
-            startContent={<HeartFilledIcon className="text-danger" />}
+            className="text-sm font-normal text-black bg-default-200"
+            href="https://github.com/Kim-Geonwoo/asdf-3"
+            startContent={<GithubIcon className="text-black" />}
             variant="flat"
           >
-            Sponsor
+            Github
           </Button>
         </NavbarItem>
       </NavbarContent>
@@ -123,12 +123,15 @@ export const Header = () => {
         <Link isExternal href="https://github.com/Kim-Geonwoo">
           <GithubIcon className="text-default-500" />
         </Link>
+        <div className="text-gray-300">
+
         <NavbarMenuToggle />
+        </div>
       </NavbarContent>
 
-      <NavbarMenu>
+      <NavbarMenu className="bg-black z-50">
         {searchInput}
-        <div className="mx-4 mt-2 flex flex-col gap-2 ">
+        <div className="mx-4 mt-2 flex flex-col gap-2">
           <NavbarItem className="lg:flex">
             <Link
               className="text-white"
@@ -158,7 +161,7 @@ export const Header = () => {
               className="text-white"
               href="https://www.melon.com/artist/detail.htm?artistId=3985240"
             >
-              Spotify
+              Melon
             </Link>
           </NavbarItem>
 
@@ -167,12 +170,12 @@ export const Header = () => {
             <Button
               isExternal
               as={Link}
-              className="text-sm font-normal text-default-600 bg-default-100"
-              href={siteConfig.links.sponsor}
-              startContent={<HeartFilledIcon className="text-danger" />}
+              className="text-sm font-normal text-black bg-default-200"
+              href="https://github.com/Kim-Geonwoo/asdf-3"
+              startContent={<GithubIcon className="text-black" />}
               variant="flat"
             >
-              Sponsor
+              Github
             </Button>
           </NavbarItem>
         </div>

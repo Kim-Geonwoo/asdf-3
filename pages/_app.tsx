@@ -16,7 +16,10 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <HeroUIProvider navigate={router.push}>
       <NextThemesProvider>
-        <Component className="dark" {...pageProps} />
+        <Component
+          className="dark text-foreground bg-background"
+          {...pageProps}
+        />
       </NextThemesProvider>
     </HeroUIProvider>
   );
