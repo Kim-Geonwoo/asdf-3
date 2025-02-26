@@ -25,7 +25,7 @@ export const Header = () => {
       aria-label="Search"
       classNames={{
         inputWrapper: "bg-default-100",
-        input: "text-sm"
+        input: "text-sm",
       }}
       endContent={
         <Kbd className="hidden lg:inline-block" keys={["command"]}>
@@ -46,7 +46,9 @@ export const Header = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <div className="text-gray-100 font-bold text-inherit">Geonwoo_PlayList</div>
+            <div className="text-gray-100 font-bold text-inherit">
+              Geonwoo_PlayList
+            </div>
           </NextLink>
         </NavbarBrand>
         <div className="hidden lg:flex gap-4 justify-start ml-2">
@@ -124,8 +126,7 @@ export const Header = () => {
           <GithubIcon className="text-default-500" />
         </Link>
         <div className="text-gray-300">
-
-        <NavbarMenuToggle />
+          <NavbarMenuToggle />
         </div>
       </NavbarContent>
 

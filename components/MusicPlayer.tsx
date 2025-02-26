@@ -77,7 +77,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
   return (
     <>
       <div className="w-[30rem] h-fit bg-black  rounded-lg shadow-lg p-4">
-        <div className="flex items-center">
+        <div className="flex flex-row items-between">
           <Image
             alt=""
             className="w-16 h-16 bg-gray-300 rounded-full flex-shrink-0"
@@ -86,7 +86,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
             src={trackImg}
             width={64}
           />
-          <div className="ml-4 text-center">
+          <div className="ml-12 text-center">
             <p className="font-bold text-gray-100">
               지금 재생중: {track.charAt(0).toUpperCase() + track.slice(1)}
             </p>
